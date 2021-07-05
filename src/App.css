@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Contrail+One&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Contrail One";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  overflow-x: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* =========================== Header =========================== */
+
+.header-row {
+  background: url("./bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 50vh;
+  background-attachment: fixed;
+  position: relative;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-row::before {
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.header-row {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  text-align: center;
+  height: 20rem;
 }
 
-.App-link {
-  color: #61dafb;
+.header-search {
+  margin-top: 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-info {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-group {
+  width: 120%;
+}
+
+.header-title h1 {
+  color: #fff;
+  margin-left: 20px;
+}
+
+/* =========================== Card =========================== */
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 17rem;
+  transition: ease-out 0.5s box-shadow;
+}
+
+img {
+  height: 10rem;
+  width: 8rem;
+  cursor: pointer;
+}
+
+.book-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.book-card-detail {
+  margin-top: 15px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.row {
+  justify-content: center;
 }
